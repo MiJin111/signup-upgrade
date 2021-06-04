@@ -1,0 +1,11 @@
+<h1>Write your Signup</h1>
+
+<form action="{% url 'create' %}" method="post">
+    {{% csrf_token %}}
+    회원 이름:<input type="text" name = "name">
+    나이:<input type="text" name = "age">
+    가입 날짜:<input type="text" name = "pub_date">
+    이메일:<input type="text" name = "email">
+    자기 소개:<textarea name="introduce" id="" cols="30" rows="10">
+    <button type="submit"> submit</button>
+</form>
