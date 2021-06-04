@@ -18,5 +18,8 @@
     </div>
     <hr>
     <p>{{signup.introduce}}</p>
+    <a href="{% url 'edit' signup.id %}">edit</a>
+    <a href="{% url 'delete' signup.id %}">delete</a>
+    <a href="{% url 'house' signup.id %}">메인 페이지로 돌아가기</a>
 </body>
 </html>

@@ -5,26 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
-    <style>
-        body{text-align: center;}
-    </style>
+ 
 </head>
 <body>
     <h1>Signup Project</h1>
     <div>
-        <a href="{% url 'new' %}">write signup</a>
+        <a href="{% url 'new' %}">Write your information</a>
     </div>
     <div class="container">
     {% for signup in signups %}
         <div>
-        {{signup.name}} 
-        {{signup.age}} 
-        {{signup.pub_date}} 
-        {{signup.email}} 
+       <br> <h3>{{signup.name}} </h3> 
+        {{signup.age}} <br>
+        {{signup.pub_date}} <br>
+        {{signup.email}} <br>
         {{signup.info_summary}} <a href = "{% url 'detail' signup.id %}">...more</a>
         <br>
         </div>
     {% endfor %}
-    </div>
+  </div>  
 </body>
 </html>
