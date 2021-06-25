@@ -8,6 +8,9 @@ class Signup(models.Model):
     email = models.EmailField(max_length=100)
     introduce = models.TextField()
 
+    image = models.ImageField(upload_to='images/',default="")
+
+
     def __str__(self):
         return self.name
 

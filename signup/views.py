@@ -3,6 +3,10 @@ from django.utils import timezone
 from .models import Signup
 # Create your views here.
 
+def portfolio(reauest):
+    portfolio = Signup.objects
+    return render(request,'home.html',{'portfolio':portfolio})
+
 def home(request):
    signups = Signup.objects.all()
    return render(request, 'home.html', {'signups':signups})

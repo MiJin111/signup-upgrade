@@ -1,3 +1,7 @@
+{% extends 'base.html' %}
+
+{% block contents %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +12,12 @@
  
 </head>
 <body>
+    <img src="{% static 'IU photo.jpg' %}" height="600" alt="아이유입니다">
+    {% for end in portfolio.all %}
+    {{end.name}}
+    <img src="{{end.image.url}}" height="600">
+    {% endfor %}
+
     <h1>Signup Project</h1>
     <div>
         <a href="{% url 'new' %}">Write your information</a>
@@ -24,5 +34,8 @@
         </div>
     {% endfor %}
   </div>  
+{% endblock %}
+
+
 </body>
 </html>

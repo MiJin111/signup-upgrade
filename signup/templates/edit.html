@@ -1,3 +1,7 @@
+{% extends 'base.html' %}
+
+{% block contents %}
+
 <h1>Update your Signup</h1>
 <form action="{% url 'update' signup.id %}" method="post">
     {% csrf_token %}
@@ -8,3 +12,5 @@
     자기 소개 : <textarea name="introduce" id="" cols="30" rows="10">{{signup.body}}</textarea>
     <button type="submit">submit</button>
 </form>
+
+{% endblock %}
